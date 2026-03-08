@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on Affiliate Engine</title>
-    <link>https://example.com/</link>
-    <description>Recent content in Home on Affiliate Engine</description>
+    <title>Tools on Affiliate Engine</title>
+    <link>https://example.com/tools/</link>
+    <description>Recent content in Tools on Affiliate Engine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 08 Mar 2026 09:30:00 +0000</lastBuildDate>
-    <atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://example.com/tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Best Ai Tools For Blog Writing</title>
       <link>https://example.com/tools/best-ai-tools-for-blog-writing/</link>
