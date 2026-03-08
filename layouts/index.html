@@ -1,5 +1,14 @@
-{{ define "main" }}
-  <h1>{{ .Site.Title }}</h1>
-  <p>This site is live.</p>
-  <p>Next step: publish content.</p>
-{{ end }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }}</title>
+  <meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}AI tool recommendations and guides{{ end }}">
+</head>
+<body>
+  <main style="max-width: 800px; margin: 40px auto; font-family: Arial, sans-serif; line-height: 1.6; padding: 0 20px;">
+    {{ .Content }}
+  </main>
+</body>
+</html>
