@@ -6,8 +6,6 @@ draft: false
 
 # Affiliate Engine
 
-HOME TEST MARKER 777
-
 Discover useful AI tools for specific jobs, industries, and workflows.
 
 ## Start here
@@ -17,3 +15,7 @@ Discover useful AI tools for specific jobs, industries, and workflows.
 - [Best AI Tools for Coding](/tools/best-ai-tools-for-coding/)
 - [Best AI Tools for Marketing](/tools/best-ai-tools-for-marketing/)
 - [Best AI Tools for Students](/tools/best-ai-tools-for-students/)
+
+## What this site is becoming
+
+Affiliate Engine is being built into a focused library of AI tool recommendations, comparisons, and use-case guides.
