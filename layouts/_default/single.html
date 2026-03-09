@@ -1,15 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ .Title }}</title>
-  <meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
-</head>
-<body>
-  <main style="max-width: 800px; margin: 40px auto; font-family: Arial, sans-serif; line-height: 1.6; padding: 0 20px;">
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
-  </main>
-</body>
-</html>
+{{ define "main" }}
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-card">
+      <div class="eyebrow">Use-Case Guide</div>
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+      <div class="cta-row">
+        <a class="btn primary" href="/tools/">Browse More Guides</a>
+        <a class="btn" href="/">Back to Home</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="main">
+  <div class="wrap">
+    <div class="grid">
+      <article class="content">
+        <div class="panel">
+          {{ .Content }}
+        </div>
+      </article>
+
+      <aside class="sidebar">
+        <div class="panel">
+          <h2>Quick take</h2>
+          <p class="muted">This page is now a cleaner starter guide. The next upgrade is to add real tool picks, pricing notes, comparison tables, and affiliate links.</p>
+        </div>
+
+        <div class="panel">
+          <h2>What’s coming next</h2>
+          <ul>
+            <li>Tool-by-tool recommendations</li>
+            <li>Beginner vs pro picks</li>
+            <li>Budget-friendly options</li>
+            <li>Pricing and comparison blocks</li>
+            <li>Affiliate call-to-action sections</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h2>Explore more</h2>
+          <a class="btn" href="/tools/">See all tool guides</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+{{ end }}

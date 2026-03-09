@@ -1,14 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ .Title }}</title>
-  <meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}AI tool recommendations and guides{{ end }}">
-</head>
-<body>
-  <main style="max-width: 800px; margin: 40px auto; font-family: Arial, sans-serif; line-height: 1.6; padding: 0 20px;">
-    {{ .Content }}
-  </main>
-</body>
-</html>
+{{ define "main" }}
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-card">
+      <div class="eyebrow">AI Tool Directory</div>
+      <h1>{{ .Title }}</h1>
+      <p class="lead">Browse practical guides to AI tools by use case. These pages are being upgraded into clearer comparison pages with stronger recommendations, better structure, and monetization-ready callouts.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="/tools/">Browse Tool Guides</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="main">
+  <div class="wrap">
+    <div class="panel">
+      <h2>Popular starting points</h2>
+      <div class="card-grid">
+        {{ range first 12 (where .Site.RegularPages "Section" "tools") }}
+          <a class="mini-card" href="{{ .RelPermalink }}">
+            <strong>{{ .Title }}</strong>
+            <div class="muted" style="margin-top:8px;">{{ .Description }}</div>
+          </a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

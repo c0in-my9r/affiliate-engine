@@ -1,18 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ .Title }}</title>
-</head>
-<body>
-  <main style="max-width: 800px; margin: 40px auto; font-family: Arial, sans-serif; line-height: 1.6; padding: 0 20px;">
-    <h1>{{ .Title }}</h1>
-    <ul>
-      {{ range .Pages }}
-        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-      {{ end }}
-    </ul>
-  </main>
-</body>
-</html>
+{{ define "main" }}
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-card">
+      <div class="eyebrow">Browse</div>
+      <h1>{{ .Title }}</h1>
+      <p class="lead">Explore AI tool pages grouped by practical use case. This library is being expanded from starter guides into full comparison pages.</p>
+    </div>
+  </div>
+</section>
+
+<section class="main">
+  <div class="wrap">
+    <div class="panel">
+      <div class="card-grid">
+        {{ range .Pages }}
+          <a class="mini-card" href="{{ .RelPermalink }}">
+            <strong>{{ .Title }}</strong>
+            <div class="muted" style="margin-top:8px;">{{ .Description }}</div>
+          </a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
